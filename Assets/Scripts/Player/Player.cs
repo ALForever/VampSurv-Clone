@@ -27,11 +27,11 @@ public class Player : MonoBehaviour {
         Instance = this;
     }
     private void Start() {
-        currentHp = maxHp;
+        if (currentHp > maxHp) {
+            currentHp = maxHp;
+        }        
 
-        OnHealthChanged?.Invoke(this, new OnHealthChangedEventArgs {
-            healthNormalized = (float)currentHp / maxHp
-        });
+        UpdateHpBar();
     }
 
 
@@ -44,11 +44,22 @@ public class Player : MonoBehaviour {
             currentHp = 0;
             PlayerDeath();
         }
-        OnHealthChanged?.Invoke(this, new OnHealthChangedEventArgs {
-            healthNormalized = (float)currentHp/maxHp
-        });
+        UpdateHpBar();
     }
     private void PlayerDeath() {
         Debug.Log("PLAYER DIED!");
+    }
+    public void Heal(int healingPoint) {
+        currentHp += healingPoint;
+        if (currentHp > maxHp) {
+            currentHp = maxHp;
+        }
+        UpdateHpBar();
+    }
+
+    private void UpdateHpBar() {
+        OnHealthChanged?.Invoke(this, new OnHealthChangedEventArgs {
+            healthNormalized = (float)currentHp / maxHp
+        });
     }
 }

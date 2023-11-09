@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5579216884705790171}
+  - component: {fileID: 8988302269026487250}
+  - component: {fileID: 212792707150746041}
   - component: {fileID: 2192379112875886408}
   - component: {fileID: 6692165187396437336}
-  - component: {fileID: 8988302269026487250}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -34,6 +35,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8988302269026487250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422761943303208102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7672eb79aa8a1f4886e92f238b9f84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &212792707150746041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422761943303208102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003300bb566c14543a225e335854a3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropObject: {fileID: 8959614428139108899, guid: d91c2d003ac88e14a9a5d69c91317b05, type: 3}
+  chance: 0.579
 --- !u!212 &2192379112875886408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -131,16 +158,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.85}
   m_EdgeRadius: 0
---- !u!114 &8988302269026487250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5422761943303208102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7672eb79aa8a1f4886e92f238b9f84a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootObject: {fileID: 8959614428139108899, guid: d91c2d003ac88e14a9a5d69c91317b05, type: 3}
